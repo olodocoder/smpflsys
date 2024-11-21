@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Storage System</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 font-sans text-gray-900">
+    <!-- Container -->
+    <div class="max-w-4xl mx-auto p-6">
+      <h1 class="text-4xl font-semibold text-center mb-6">
+        File Storage System
+      </h1>
+
+      <!-- File Upload Section -->
+      <div class="mb-6">
+        <h2 class="text-2xl font-medium">Upload File</h2>
+        <form id="uploadForm" class="mt-4" enctype="multipart/form-data">
+          <input
+            type="file"
+            id="fileToUpload"
+            class="border border-gray-300 p-2 rounded-md w-full"
+            required
+          />
+          <button
+            type="submit"
+            class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"
+          >
+            Upload
+          </button>
+        </form>
+        <p id="uploadStatus" class="mt-2 text-red-600"></p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-medium mb-4">Uploaded Files</h2>
+        <ul id="fileList" class="space-y-2">
+          <!-- Files will be populated here -->
+        </ul>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
